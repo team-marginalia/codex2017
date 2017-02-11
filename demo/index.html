@@ -10,11 +10,12 @@
 
         <link rel="stylesheet" href="css/basic.css">
         <link rel="stylesheet" href="css/annotator.css">
+        <link rel="stylesheet" href="css/normalize.css">
 
         <!-- EPUBJS Renderer -->
         <script src="js/zip.min.js"></script>
         <script src="js/epub.min.js"></script>
-        <!--<script src="js/annotator-2.0.0-alpha.3.min.js"></script>-->
+        <script src="js/annotator-2.0.0-alpha.3.min.js"></script>
 
          <script>
             "use strict";
@@ -32,6 +33,9 @@
     </div>
 
     <script>
+      var app = new annotator.App();
+      app.include(annotator.ui.main);
+      app.start();
 
       Book.getMetadata().then(function(meta){
 
