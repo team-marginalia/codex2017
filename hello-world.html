@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script src="./epub.min.js"></script>
+    <script src="./zip.min.js"></script>
+    <script>
+        "use strict";
+        var Book = ePub("https://team-marginalia.github.io/codex2017/Frankenstein.epub");
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div id="prev" onclick="Book.prevPage();" class="arrow">‹</div>
+        <div id="area"></div>
+        <div id="next" onclick="Book.nextPage();" class="arrow">›</div>
+    </div>
+
+    <script>
+        Book.renderTo("area");
+    </script>
+</body>
+</html>
