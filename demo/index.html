@@ -10,13 +10,34 @@ The Project Gutenberg E-text of Frankenstein, by Mary Wollstonecraft (Godwin) Sh
   <script src="js/instantclassic.js"></script>
   <link rel="stylesheet" href="css/ebook_viewer.css">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Libre+Baskerville" rel="stylesheet">
-</head>
+  <!--Meltdown CSS-->
+  <!--<link href="styles/annotator.css" rel="stylesheet" type="text/css"/>-->
+  <link href="js/meltdown/meltdown/css/meltdown.css" rel="stylesheet" type="text/css"/>
+  <link href="js/meltdown/styles/annotator.meltdown.css" rel="stylesheet" type="text/css"/>
 
+  <!--Scripts needed by meltdown-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/meltdown/showdown/showdown.min.js"></script>
+  <script type="text/javascript" src="js/meltdown/showdown/xss.min.js"></script>
+  <script type="text/javascript" src="js/meltdown/showdown/footnotes.js"></script>
+  <script type="text/javascript" src="js/meltdown/meltdown/js/libs/rangyinputs-jquery.min.js"></script>
+  <script type="text/javascript" src="js/meltdown/meltdown/js/libs/element_resize_detection.js"></script>
+  <script type="text/javascript" src="js/meltdown/meltdown/js/jquery.meltdown.js"></script>
+  <script type="text/javascript" src="js/meltdown/scripts/annotator.meltdown.js"></script>
+</head>
 <body>
 
 <script>
   app = new annotator.App();
-  app.include(annotator.ui.main, {element: document.body});
+  app.include(annotator.ui.main, {
+    element: document.body,
+    viewerExtensions: [
+      annotatormeltdown.viewerExtension
+    ],
+    editorExtensions: [
+      annotatormeltdown.getEditorExtension({min_width: '500px', 'font_awesome': true})
+    ]
+  });
   app.include(instantClassic)
   app.start();
 </script>
