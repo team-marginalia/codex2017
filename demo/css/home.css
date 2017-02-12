@@ -1,9 +1,12 @@
 #video {
-	background-color: gray;
+	/*background-color: gray;*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 200px;
+}
+
+.grey {
+    color:#bbb;
 }
 
 #placeholder {
