@@ -18,3 +18,12 @@
 	display: inline-block;
 	float: right;
 }
+
+#buttondiv {
+	width:100%;
+	text-align:center;
+	clear:both;
+}
+.tryit {
+	margin:30 auto;
+}
